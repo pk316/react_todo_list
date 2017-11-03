@@ -5,7 +5,6 @@ export function getAll(){
     return{
         type: types.GET_ALL,
         payload: todoData
-
     }
 }
 
@@ -19,6 +18,13 @@ export function addTodo(item){
 export function deleteTodo(index){
     return {
         type: types.DELETE_TODO,
+        payload: index
+    }
+}
+
+export function toggleComplete(index){
+    return{
+        type: types.TOGGLE_COMPLETE,
         payload: index
     }
 }

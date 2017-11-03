@@ -1,7 +1,8 @@
 export default [
     {
         title : 'wash car',
-        details: 'wash the red car'
+        details: 'wash the red car',
+        complete: true
     },
     {
         title: 'clean house',

@@ -9,11 +9,15 @@ export default (state = DEFAULT_STATE, action) => {
         case types.ADD_TODO:
             return { all: [action.payload, ...state.all ] };
         case types.DELETE_TODO:
-            const newState = state.all.slice();
-
+            let newState = state.all.slice();
             newState.splice( action.payload, 1)
-            
             return { all: newState }
+        case types.TOGGLE_COMPLETE:
+             newState = state.all.slice();
+
+             newState[action.payload].complete = !newState[action.payload].complete;
+             
+             return { all: [...newState] };
         default:
             return state;
     }

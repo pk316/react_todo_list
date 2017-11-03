@@ -41,7 +41,7 @@ class AddForm extends Component {
                 <p> Add To Do Item </p>
                 <input name ='title' placeholder= 'Title' value = { title} onChange = {this.handleInputChange}/> 
                 <input name ='details' placeholder= 'Details' value = { details } onChange = {this.handleInputChange}/>
-                <button className='btn purple darken-3'>Add Item</button> 
+                <button className='btn-floating btn-large '>Add</button> 
             </form>
         )
     }
